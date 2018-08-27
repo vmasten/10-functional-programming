@@ -25,7 +25,7 @@ var app = app || {};
 
     // OLD forEach():
     articleData.forEach(articleObject => Article.all.push(new Article(articleObject)));
-    
+
 
     // Article.all.map(new Article(articleObject));
     // console.log(Article.all);
@@ -40,15 +40,25 @@ var app = app || {};
   };
 
   Article.numWordsAll = () => {
-    return Article.all.map().reduce()
+    return Article.all.map(words => words.body.split(' ').length).reduce((acc, curr) => acc + curr);
   };
 
   Article.allAuthors = () => {
-    return Article.all.map().reduce();
+    return Article.all.map(el => el.author).reduce((acc, curr) => {
+      if (acc.indexOf(curr) === -1) {
+        acc.push(curr);
+      }
+      return acc;
+    }, []);
   };
 
   Article.numWordsByAuthor = () => {
-    return Article.allAuthors().map(author => {})
+    return Article.allAuthors().map(author => (
+      {name : author,
+        totalWords : Article.all.filter(article => article.author === author)
+          .map(words => words.body.split(' ').length)
+          .reduce((acc, curr) => acc + curr)}
+    ))
   };
 
   Article.truncateTable = callback => {
