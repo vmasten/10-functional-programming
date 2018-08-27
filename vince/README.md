@@ -16,6 +16,25 @@ This application is a portable blogging platform that rebuilds an existing datab
 Uses a combination of HTML/CSS, JavaScript with jQuery, Handlebars.js, node.js (with express, fs, and pg), highlight.js, JSON, and Postgres.
 
 ## Change Log
+Author: Vince Masten <vmasten@me.com>
+Date:   Sun Aug 26 19:05:27 2018 -0700
+
+    working on the README
+
+Author: Vince Masten <vmasten@me.com>
+Date:   Sun Aug 26 18:52:19 2018 -0700
+
+    all functionality complete
+
+Author: Vince Masten <vmasten@me.com>
+Date:   Sun Aug 26 17:45:24 2018 -0700
+
+    functional programming tasks complete
+
+Author: Vince Masten <vmasten@me.com>
+Date:   Sun Aug 26 16:01:11 2018 -0700
+
+    IIFEs and postgres troubleshooting
 
 ## Credits and Collaborations
-MDN was a big help, as was Stack Overflow and a few other random sites that helped me become unstuck at times.
+MDN was a big help, as was Stack Overflow and a few other random sites that helped me get unstuck at times.
